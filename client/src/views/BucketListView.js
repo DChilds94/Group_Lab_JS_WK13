@@ -22,4 +22,10 @@ BuckList.prototype.render = function (country) {
   table.appendChild(tableRow);
   };
 
+  BuckList.prototype.clear = function () {
+    this.bucketList = [];
+    const table = document.querySeletcor("#bucket-list");
+    table.innerText = "";
+  };
+
 modules.export = BuckList;
