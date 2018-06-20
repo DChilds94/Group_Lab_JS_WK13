@@ -1,4 +1,5 @@
 const Request = require('./src/services/Request.js');
+
 const bucketListView = require('./src/views/BucketListView.js');
 
 const bucketList = new BucketList();

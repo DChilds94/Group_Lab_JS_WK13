@@ -1,6 +1,6 @@
 ## Bucket List
 
-Create an application to make a 'bucket list' of countries you want to visit:
+Create an application to make a 'bucket list' of countries you wagit nt to visit:
 
 - Use the rest countries API to get the countries of the world.
 - Add countries to a bucket list.
