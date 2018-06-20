@@ -16,11 +16,27 @@ MongoClient.connect("mongodb://localhost:27017", (err, client) => {
 
     app.get('/api/bucketlist', (req, res) => {
         db.collection('list').find().toArray((err, allList) => {
-            if (err) console.log(err); 
+            if (err) { 
+                console.log(err); 
+                res.status(500); 
+                res.send(); 
+            }
+            res.json(allList);
         });
     });
 
-    app.listen(3000, () => {
-        console.log("Listening on port 3000");
+    app.post("/api/bucketlist", (req, res) => {
+        db.collection("list").save(req.body, (err, result) => {
+        if (err) { 
+            console.log(err); 
+            res.status(500); 
+            res.send(); 
+        }
+        res.status(201);
+        res.json(result.ops[0]);
+        console.log("saved to database!!");
+      });
     });
+
+    app.listen(3000, () => { console.log("Listening on port 3000"); });
 });
