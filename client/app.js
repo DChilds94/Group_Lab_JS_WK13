@@ -12,5 +12,12 @@ const addCountryRequestComplete = function(countryToAdd){
   bucketList.addCountryToList(countryToAdd);
 }
 
+const displayCountriesRequestComplete = function(allCountries){
+  allCountries.forEach(function(quote){
+    bucketList.addCountryToList(countryToAdd);
+  });
+}
+
+
 
 window.listen("load", appStart);
