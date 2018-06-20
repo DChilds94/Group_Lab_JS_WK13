@@ -12,10 +12,5 @@ const addCountryRequestComplete = function(countryToAdd){
   bucketList.addCountryToList(countryToAdd);
 }
 
-const 
-
-// get all lists
-// delete bucketlist
-// mark item on list is complete
 
 window.listen("load", appStart);
