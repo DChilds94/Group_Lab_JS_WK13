@@ -1,12 +1,13 @@
-const Request = require('/client/services/Request.js');
-const bucketListView = require('/client/views/BucketListView.js');
+const Request = require('./src/services/Request.js');
+const bucketListView = require('./src/views/BucketListView.js');
 
 const bucketList = new BucketList();
 const request = new Request("http://localhost:3000/api/bucketlist");
 
 const appStart = function(){
-  request.get(addCountryRequestComplete);
+  request.get(displayCountriesRequestComplete);
 }
+
 
 const addCountryRequestComplete = function(countryToAdd){
   bucketList.addCountryToList(countryToAdd);
@@ -17,6 +18,13 @@ const displayCountriesRequestComplete = function(allCountries){
     bucketList.addCountryToList(countryToAdd);
   });
 }
+
+const deleteCountriesRequestComplete = function(){
+  bucketList.clear();
+}
+
+
+
 
 
 
