@@ -13,7 +13,7 @@ Request.prototype.get = (next) => {
     request.send();
 }
 
-Request.prototype.post = (next) => {
+Request.prototype.post = (country, next) => {
     const request = XMLHttpRequest();
     request.open("POST", this.url);
     request.setRequestHeader("Content-Type", "application/json");
@@ -22,7 +22,7 @@ Request.prototype.post = (next) => {
         const responseBody = JSON.parse(this.response);
         next(responseBody);
     });
-    request.send(JSON.stringify(quote));
+    request.send(JSON.stringify(country));
 }
 
 Request.prototype.delete = (next) => {
