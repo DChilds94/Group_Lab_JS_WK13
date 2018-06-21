@@ -3,5 +3,5 @@ const listItem = (name, population, capitalCity) => {
     this.population = population;
     this.capitalCity = capitalCity;
  }
- 
+
  module.exports = listItem;

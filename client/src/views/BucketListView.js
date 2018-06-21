@@ -7,7 +7,7 @@ BucketList.prototype.addCountryToList = function(country) {
   this.render(country);
 }
 
-BuckList.prototype.render = function (country) {
+BucketList.prototype.render = function (country) {
   const table = document.querySeletcor("#bucket-list")
   const tableRow = document.createElement("tr");
   const name = document.createElement('th');
@@ -22,10 +22,10 @@ BuckList.prototype.render = function (country) {
   table.appendChild(tableRow);
   };
 
-  BuckList.prototype.clear = function () {
+  BucketList.prototype.clear = function () {
     this.bucketList = [];
     const table = document.querySeletcor("#bucket-list");
     table.innerText = "";
   };
 
-modules.export = BuckList;
+module.exports = BucketList;
