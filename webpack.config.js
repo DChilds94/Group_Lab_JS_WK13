@@ -1,5 +1,5 @@
 config = {
-    entry: __dirname + "/client/src/app.js",
+    entry: __dirname + "/client/app.js",
     output: {
       filename: "bundle.js",
       path: __dirname + "/client/build"
